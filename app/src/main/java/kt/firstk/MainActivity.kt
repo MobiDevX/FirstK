@@ -15,10 +15,11 @@ class MainActivity : AppCompatActivity() {
 
         editText = findViewById(R.id.editText)
         textView = findViewById(R.id.textView)
-        val year = editText.text.toString()
+        val year = editText.text.toString().toInt()
             textView.text = when (year) {
-                "2010" -> "Froyo"
-                "2012" -> "Jellybean"
+                2012 -> "Jellybean"
+                2007,2008 -> "До Андроидная эра"
+                in 2015..2019 -> " от Lollipop до Pie "
             else -> " другие версии "
         }
     }

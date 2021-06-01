@@ -2,4 +2,5 @@
     <string name="app_name">FirstK</string>
     <string name="hint_text">Input text</string>
     <string name="text">TextView</string>
+    <string name="button_text">Ok</string>
 </resources>

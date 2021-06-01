@@ -7,15 +7,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private var textView: TextView? = null
+    private var tv : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView = findViewById(R.id.textView)
+        tv = findViewById(R.id.textView)
     }
-    fun buttonOnClick(view: View?) {
-        textView!!.text = "Нажата кнопка"
+    fun buttonOnClick(view: View) {
+        tv!!.text = "Нажата кнопка Ok"
     }
 }

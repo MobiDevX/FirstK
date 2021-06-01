@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private var tv : TextView? = null
+    lateinit var tv : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
         tv = findViewById(R.id.textView)
     }
     fun buttonOnClick(view: View) {
-        tv!!.text = "Нажата кнопка Ok"
+        tv.text = "Нажата кнопка Ok"
     }
 }

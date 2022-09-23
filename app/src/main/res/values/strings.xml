@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">FirstK</string>
-    <string name="hint_text">Input text</string>
+    <string name="app_name">First</string>
+    <string name="hint_text">Input data:</string>
     <string name="text">TextView</string>
     <string name="button_text">Ok</string>
+    <string name="bClick_text">Нажата кнопка</string>
 </resources>

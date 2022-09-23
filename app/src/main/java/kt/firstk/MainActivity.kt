@@ -2,14 +2,11 @@ package kt.firstk
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-
 class MainActivity : AppCompatActivity() {
+    private lateinit var editText: EditText
     private lateinit var textView : TextView
     private lateinit var radioGroup: RadioGroup
     private lateinit var rb1 : RadioButton
@@ -20,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        editText = findViewById(R.id.editText)
         textView = findViewById(R.id.tv)
 
         // Добавить радиогруппу с радиокнопками:
@@ -34,21 +32,21 @@ class MainActivity : AppCompatActivity() {
         // Добавить слушателя:
         val button = findViewById<Button>(R.id.button)
         // 3) Создать слушателя для кнопки:
-        val bListener  = View.OnClickListener() {
-            textView.text= "bListener: Нажата кнопка"
+/*        val bListener  = View.OnClickListener() {
+            textView.text= getString(R.string.bClick_text)
         }
-        button.setOnClickListener(bListener)
+        button.setOnClickListener(bListener)*/
 
         // 2) Добавить слушателя для кнопки:
 /*        button.setOnClickListener(View.OnClickListener {
-            textView.text= "ClickListener: Нажата кнопка"
+            textView.text= getString(R.string.bClick_text)
         })*/
     }
 
     // 1) Добавить функцию для обработки нажатия кнопки:
-/*    fun buttonClick(view: View) {
-        textView.text= "Нажата кнопка"
-    }*/
+    fun buttonClick(view: View) {
+        textView.text= editText.text //"Нажата кнопка"
+    }
 
     private val rbListener = View.OnClickListener {
         when (radioGroup.getCheckedRadioButtonId()) {
@@ -58,4 +56,5 @@ class MainActivity : AppCompatActivity() {
             else -> textView.text = "Не выбрана кнопка"
         }
     }
+
 }

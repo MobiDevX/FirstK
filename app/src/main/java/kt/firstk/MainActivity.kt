@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener(bListener)*/
 
         // 2) Добавить слушателя для кнопки:
+
 /*        button.setOnClickListener(View.OnClickListener {
             textView.text= getString(R.string.bClick_text)
         })*/
